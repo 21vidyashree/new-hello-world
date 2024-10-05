@@ -32,6 +32,6 @@ spec:
     spec:
       containers:
       - name: devopsapp
-        image: vidz21mandya.jfrog.io/artifactory/repo-war-generic-local/appA/webapp-65.war:1
+        image: vidz21mandya.jfrog.io/artifactory/repo-war-generic-local/app/webapp-71.war:2
         ports:
         - containerPort: 8080
