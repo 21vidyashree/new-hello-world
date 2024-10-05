@@ -14,7 +14,7 @@
 
   - name: download war file
     ansible.builtin.get_url:
-      url: https://vidz21mandya.jfrog.io/artifactory/repo-war-generic-local/appA/webapp-{{ build_number }}.war
+      url: https://vidz21mandya.jfrog.io/artifactory/repo-war-generic-local/app/webapp-{{ build_number }}.war
       dest: /home/ec2-user/sourcefile/webapp.war
       username: vidyashreemp21@gmail.com
       password: 16August###
