@@ -1,14 +1,4 @@
-# Base image: NGINX latest version
-FROM nginx:latest
-
-# Remove the default NGINX HTML content
-RUN rm -rf /usr/share/nginx/html/*
-
-# Copy the web application (assuming it's static content like HTML, CSS, JS)
-#COPY webapp/target/* /usr/share/nginx/html/
-
-# Expose the default NGINX port
-EXPOSE 80
-
-# Start NGINX (no need for a custom entry point as NGINX starts automatically)
-CMD ["nginx", "-g", "daemon off;"]
+FROM tomcat:8.0
+#EXPOSE 8090
+COPY webapp/target/webapp.war /usr/local/tomcat/webapps/webapp.war
+#ENTRYPOINT ["java","-jar","webapp.war"]
